@@ -1,5 +1,4 @@
 import axios from 'axios';
-<<<<<<< HEAD:src-js/services/api.js
 import products from '../data/products.js';
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
@@ -143,33 +142,5 @@ export const verifyRazorpayPayment = (payload) => {
     }
     return api.post('/payment/verify', payload).then(r => r.data).catch(() => mockApi.verifyRazorpayPayment(payload));
 };
-=======
-
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
-
-const api = axios.create({
-  baseURL: BASE_URL,
-  timeout: 10000,
-  headers: { 'Content-Type': 'application/json' },
-});
-
-export const fetchProducts = (params = {}) =>
-  api.get('/products', { params }).then(r => r.data);
-
-export const fetchProductById = (id) =>
-  api.get(`/products/${id}`).then(r => r.data);
-
-export const createOrder = (payload) =>
-  api.post('/orders', payload).then(r => r.data);
-
-export const fetchOrder = (id) =>
-  api.get(`/orders/${id}`).then(r => r.data);
-
-export const createRazorpayOrder = (amount) =>
-  api.post('/payment/create-order', { amount }).then(r => r.data);
-
-export const verifyRazorpayPayment = (payload) =>
-  api.post('/payment/verify', payload).then(r => r.data);
->>>>>>> 1eed3bb41956043c2cd813d08cf28aeeaa2efc64:src/services/api.js
 
 export default api;
