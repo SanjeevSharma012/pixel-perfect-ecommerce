@@ -53,4 +53,3 @@ export const initiateRazorpayPayment = async ({ amount, customer, items, onSucce
     });
     rzp.open();
 };
-};
