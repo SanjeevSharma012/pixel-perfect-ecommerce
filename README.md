@@ -33,12 +33,13 @@ Modern eCommerce web application built with **React**, **Tailwind CSS**, and **R
 pixel-perfect-ecommerce/
 │
 ├── public/
+│
 ├── src/
-│ ├── components/
-│ ├── pages/
-│ ├── services/
-│ ├── assets/
-│ └── App.js
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── assets/
+│   └── App.js
 │
 ├── package.json
 └── README.md
